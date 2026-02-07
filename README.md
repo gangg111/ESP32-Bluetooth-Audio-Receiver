@@ -1,10 +1,10 @@
-# BLYNDY - ESP32 Bluetooth Audio Receiver
+# ESP32 Bluetooth Audio Receiver
 
-**BLYNDY** is a high-quality Bluetooth A2DP audio sink (receiver) based on the ESP32. It is designed to turn any vintage radio or speaker system into a modern wireless device with high-fidelity sound and a visual interface.
+This is a high-quality Bluetooth A2DP audio sink (receiver) based on the ESP32. It is designed to turn any vintage radio or speaker system into a modern wireless device with high-fidelity sound and a visual interface.
 
 ## ✨ Features
 * **Premium Sound:** Utilizes the I2S protocol with an external **PCM5102 DAC** for 24-bit audio quality.
-* **Custom Interface:** Features a polished OLED splash screen with the **BLYNDY** logo and localized status messages (*"podłącz telefon"*).
+* **Custom Interface:** Features a polished OLED splash screen with the BLUETOOTH logo and localized status messages (*"connect phone"*).
 * **Metadata Display:** Shows real-time track title and artist information on the SSD1306 OLED display.
 * **Simple Control:** Single-button interface for playback control and connection management.
 
