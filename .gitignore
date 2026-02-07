@@ -39,3 +39,8 @@
 
 # debug information files
 *.dwo
+
+# Dodatki dla Arduino/ESP32
+build/
+*.bin
+*.elf
