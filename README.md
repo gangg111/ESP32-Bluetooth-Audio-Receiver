@@ -1,3 +1,15 @@
+# BLYNDY - ESP32 Bluetooth Audio Receiver
+
+**BLYNDY** is a high-quality Bluetooth A2DP audio sink (receiver) based on the ESP32. It is designed to turn any vintage radio or speaker system into a modern wireless device with high-fidelity sound and a visual interface.
+
+## ✨ Features
+* **Premium Sound:** Utilizes the I2S protocol with an external **PCM5102 DAC** for 24-bit audio quality.
+* **Custom Interface:** Features a polished OLED splash screen with the **BLYNDY** logo and localized status messages (*"podłącz telefon"*).
+* **Metadata Display:** Shows real-time track title and artist information on the SSD1306 OLED display.
+* **Simple Control:** Single button interface for playback control and device management.
+
+---
+
 ## 🔌 Connection Diagram / Schemat Połączeń
 
 <table style="width: 100%; border-collapse: collapse; font-family: sans-serif; background-color: #0d1117; color: #e6edf3; border: 1px solid #30363d;">
@@ -10,7 +22,7 @@
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3" style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #ff7b72;">PCM5102 (DAC)</td>
+      <td rowspan="3" style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #ff7b72; vertical-align: top;">PCM5102 (DAC)</td>
       <td style="padding: 8px; border: 1px solid #30363d;">BCK (Bit Clock)</td>
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-family: monospace; font-weight: bold; color: #ff7b72;">GPIO 26</td>
     </tr>
@@ -23,7 +35,7 @@
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-family: monospace; font-weight: bold; color: #ff7b72;">GPIO 19</td>
     </tr>
     <tr>
-      <td rowspan="2" style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #79c0ff;">SSD1306 (OLED)</td>
+      <td rowspan="2" style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #79c0ff; vertical-align: top;">SSD1306 (OLED)</td>
       <td style="padding: 8px; border: 1px solid #30363d;">SCL (Clock)</td>
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-family: monospace; font-weight: bold; color: #79c0ff;">GPIO 22</td>
     </tr>
@@ -33,21 +45,34 @@
     </tr>
     <tr>
       <td style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #7ee787;">PRZYCISK</td>
-      <td style="padding: 12px; border: 1px solid #30363d;">Sterowanie (GND)</td>
+      <td style="padding: 12px; border: 1px solid #30363d;">Sterowanie<br><small style="color: #8b949e;">(Zwieraj do GND)</small></td>
       <td style="padding: 12px; border: 1px solid #30363d; text-align: center; font-family: monospace; font-weight: bold; color: #7ee787;">GPIO 13 ↔ GND</td>
     </tr>
     <tr style="background-color: #161b22;">
-      <td rowspan="3" style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #d2a8ff;">ZASILANIE</td>
+      <td rowspan="3" style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #d2a8ff; vertical-align: top;">ZASILANIE</td>
       <td style="padding: 8px; border: 1px solid #30363d;">VCC PCM5102</td>
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-weight: bold; color: #ffa657;">5V / VIN</td>
     </tr>
-    <tr>
+    <tr style="background-color: #161b22;">
       <td style="padding: 8px; border: 1px solid #30363d;">VCC OLED</td>
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-weight: bold; color: #ffa657;">3.3V</td>
     </tr>
-    <tr>
+    <tr style="background-color: #161b22;">
       <td style="padding: 8px; border: 1px solid #30363d;">Wspólna Masa</td>
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-weight: bold; color: #8b949e;">GND (All)</td>
     </tr>
   </tbody>
 </table>
+
+---
+
+## 🛠 Required Libraries
+To compile this project, you need to install the following libraries in your Arduino IDE:
+1. [ESP32-A2DP](https://github.com/pschatzmann/ESP32-A2DP) by Phil Schatzmann
+2. [U8g2](https://github.com/olikraus/u8g2) by oliver
+
+## 📝 Usage
+1. Power up the ESP32.
+2. Search for **"BLYNDY"** in your phone's Bluetooth settings.
+3. Once connected, the OLED will display the track title and artist.
+4. Use the button on **GPIO 13** to pause/play music or manage the connection.
