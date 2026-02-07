@@ -10,6 +10,14 @@ This is a high-quality Bluetooth A2DP audio sink (receiver) based on the ESP32. 
 
 ---
 
+## 🏗 Hardware Requirements
+* **Microcontroller:** ESP32 DevKit V1 (or compatible ESP32 board).
+* **Audio DAC:** PCM5102A I2S Module.
+* **Display:** SSD1306 OLED 128x64 px (I2C).
+* **Control:** 1x Push Button.
+
+---
+
 ## 🔌 Connection Diagram
 
 <table style="width: 100%; border-collapse: collapse; font-family: sans-serif; background-color: #0d1117; color: #e6edf3; border: 1px solid #30363d;">
