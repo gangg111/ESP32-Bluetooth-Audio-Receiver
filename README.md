@@ -1,19 +1,21 @@
-# ESP32 Bluetooth Audio Receiver
+# BLYNDY - ESP32 Bluetooth Audio Receiver
 
-**ESP32 Bluetooth Audio Receiver** is a high-quality Bluetooth A2DP audio sink (receiver) based on the ESP32. It features an external I2S DAC for superior sound quality and an OLED display for status and metadata.
+**BLYNDY** is a high-quality Bluetooth A2DP audio sink (receiver) based on the ESP32. It is designed to turn any vintage radio or speaker system into a modern wireless device with high-fidelity sound and a visual interface.
 
 ## ✨ Features
-* **High-Fidelity Audio:** Uses I2S protocol with PCM5102 DAC.
-* **OLED Visuals:** Real-time track information and status.
-* **Custom Splash Screen:** Features the "BLYNDY" logo with polished animations.
-* **Single Button Control:** Integrated Play/Pause and connection management.
+* **Premium Sound:** Utilizes the I2S protocol with an external **PCM5102 DAC** for 24-bit audio quality.
+* **Custom Interface:** Features a polished OLED splash screen with the **BLYNDY** logo and localized status messages (*"podłącz telefon"*).
+* **Metadata Display:** Shows real-time track title and artist information on the SSD1306 OLED display.
+* **Simple Control:** Single button interface for playback control and device management.
 
-## 🔌 Connection Diagram (Pinout)
+---
+
+## 🔌 Connection Diagram / Schemat Połączeń
 
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; max-width: 550px; color: #e6edf3; background-color: #0d1117; border: 1px solid #30363d; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 28px rgba(0,0,0,0.45);">
   
   <div style="background-color: #161b22; padding: 18px; border-bottom: 1px solid #30363d; text-align: center;">
-    <span style="color: #58a6ff; font-size: 22px; font-weight: bold; letter-spacing: 1.2px;"> • Schemat Połączeń • </span>
+    <span style="color: #58a6ff; font-size: 22px; font-weight: bold; letter-spacing: 1.2px;"> • BLYNDY Pinout • </span>
   </div>
 
   <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
@@ -77,11 +79,15 @@
   </div>
 </div>
 
-## 🛠 Power Supply
-* **PCM5102:** Connect to **5V (VIN)**.
-* **OLED:** Connect to **3.3V**.
-* **Common Ground:** Ensure all GND pins are connected together.
+---
 
-## 📦 Required Libraries
-* [ESP32-A2DP](https://github.com/pschatzmann/ESP32-A2DP)
-* [U8g2](https://github.com/olikraus/u8g2)
+## 🛠 Required Libraries
+To compile this project, you need to install the following libraries in your Arduino IDE:
+1. [ESP32-A2DP](https://github.com/pschatzmann/ESP32-A2DP) by Phil Schatzmann
+2. [U8g2](https://github.com/olikraus/u8g2) by oliver
+
+## 📝 Usage
+1. Power up the ESP32.
+2. Search for **"BLYNDY"** in your phone's Bluetooth settings.
+3. Once connected, the OLED will display the track title and artist.
+4. Use the button on **GPIO 13** to pause/play music or manage the connection.
