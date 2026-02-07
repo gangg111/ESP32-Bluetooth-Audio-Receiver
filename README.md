@@ -78,6 +78,6 @@ To compile this project, you need to install the following libraries in your Ard
 
 ## 📝 Usage
 1. Power up the ESP32.
-2. Search for **"BLYNDY"** in your phone's Bluetooth settings.
+2. Search for **"ESP32 BT"** in your phone's Bluetooth settings.
 3. Once connected, the OLED will display the track title and artist.
 4. Use the button on **GPIO 13** to pause/play music or manage the connection.
