@@ -6,18 +6,18 @@
 * **Premium Sound:** Utilizes the I2S protocol with an external **PCM5102 DAC** for 24-bit audio quality.
 * **Custom Interface:** Features a polished OLED splash screen with the **BLYNDY** logo and localized status messages (*"podłącz telefon"*).
 * **Metadata Display:** Shows real-time track title and artist information on the SSD1306 OLED display.
-* **Simple Control:** Single button interface for playback control and device management.
+* **Simple Control:** Single-button interface for playback control and connection management.
 
 ---
 
-## 🔌 Connection Diagram / Schemat Połączeń
+## 🔌 Connection Diagram
 
 <table style="width: 100%; border-collapse: collapse; font-family: sans-serif; background-color: #0d1117; color: #e6edf3; border: 1px solid #30363d;">
   <thead>
     <tr style="background-color: #161b22; color: #58a6ff;">
-      <th style="padding: 12px; border: 1px solid #30363d; text-align: left;">Moduł / Urządzenie</th>
-      <th style="padding: 12px; border: 1px solid #30363d; text-align: left;">Pin Funkcja</th>
-      <th style="padding: 12px; border: 1px solid #30363d; text-align: center;">Połączenie ESP32</th>
+      <th style="padding: 12px; border: 1px solid #30363d; text-align: left;">Module / Device</th>
+      <th style="padding: 12px; border: 1px solid #30363d; text-align: left;">Pin Function</th>
+      <th style="padding: 12px; border: 1px solid #30363d; text-align: center;">ESP32 Connection</th>
     </tr>
   </thead>
   <tbody>
@@ -44,12 +44,12 @@
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-family: monospace; font-weight: bold; color: #79c0ff;">GPIO 21</td>
     </tr>
     <tr>
-      <td style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #7ee787;">PRZYCISK</td>
-      <td style="padding: 12px; border: 1px solid #30363d;">Sterowanie<br><small style="color: #8b949e;">(Zwieraj do GND)</small></td>
+      <td style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #7ee787;">BUTTON</td>
+      <td style="padding: 12px; border: 1px solid #30363d;">Control<br><small style="color: #8b949e;">(Short to GND)</small></td>
       <td style="padding: 12px; border: 1px solid #30363d; text-align: center; font-family: monospace; font-weight: bold; color: #7ee787;">GPIO 13 ↔ GND</td>
     </tr>
     <tr style="background-color: #161b22;">
-      <td rowspan="3" style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #d2a8ff; vertical-align: top;">ZASILANIE</td>
+      <td rowspan="3" style="padding: 12px; border: 1px solid #30363d; font-weight: bold; color: #d2a8ff; vertical-align: top;">POWER SUPPLY</td>
       <td style="padding: 8px; border: 1px solid #30363d;">VCC PCM5102</td>
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-weight: bold; color: #ffa657;">5V / VIN</td>
     </tr>
@@ -58,11 +58,16 @@
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-weight: bold; color: #ffa657;">3.3V</td>
     </tr>
     <tr style="background-color: #161b22;">
-      <td style="padding: 8px; border: 1px solid #30363d;">Wspólna Masa</td>
+      <td style="padding: 8px; border: 1px solid #30363d;">Common Ground</td>
       <td style="padding: 8px; border: 1px solid #30363d; text-align: center; font-weight: bold; color: #8b949e;">GND (All)</td>
     </tr>
   </tbody>
 </table>
+
+<div style="background-color: #161b22; padding: 12px; font-size: 11px; color: #8b949e; text-align: center; border: 1px solid #30363d; border-top: none; line-height: 1.5; font-family: sans-serif;">
+  The button uses an internal PULLUP resistor.<br>
+  Pin 13 must be connected directly to GND when pressed.
+</div>
 
 ---
 
